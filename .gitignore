@@ -40,3 +40,11 @@ build/
 /mvnw
 /.mvn/wrapper/maven-wrapper.properties
 /.mvn/wrapper/maven-wrapper.jar
+/.idea/dataSources.xml
+/.idea/encodings.xml
+/.idea/vcs.xml
+/.idea/artifacts/TastyTrove_jar.xml
+/out/artifacts/TastyTrove_jar/TastyTrove.jar
+/.idea/sqldialects.xml
+/.idea/misc.xml
+/.idea/.gitignore
