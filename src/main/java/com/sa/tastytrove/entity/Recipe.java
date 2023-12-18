@@ -22,9 +22,9 @@ public class Recipe{
 	@Column(name = "Description")
 	private String description;
 
-// time might not work in java -> research
+	// TODO time might not work in java -> research
 	@Column(name = "EstimatedTime")
-	private LocalTime = esttimatedTime;
+	private LocalTime esttimatedTime;
 
 	public void setId(Long Id){
 		this.id = id;	
