@@ -11,10 +11,10 @@ import jakarta.persistence.Table;
 public class RecipeIngredient{				
 	@Id			
 	@Column(name = "RecipeID")			
-	private Long id;			
+	private Long recipeid;			
 				
 	@Column(name = "IngredientID")			
-	private Long id;			
+	private Long ingredientid;			
 				
 	@Column(name = "Amount")			
 	private Long amount;			
