@@ -13,10 +13,10 @@ import jakarta.persistence.Table;
 public class Recipe_Categorie {
 	@Id
 	@Column(name= "CategoryID")
-	private long id;
+	private long categoryid;
 
 	@Column(name= "RecipeID")
-	private long id;
+	private long recipeid;
 
 	public long getCategoryId(){
 		
