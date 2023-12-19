@@ -19,6 +19,13 @@ public class RecipeIngredient{
 	@Column(name = "Amount")			
 	private Long id;			
 	
+	public int getRecipeID(){
 
-			
+	}
+	
+	public int getIngredientID(){
+
+	}
+
+	public void setAmount( 		
 				
