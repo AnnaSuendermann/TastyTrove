@@ -17,7 +17,7 @@ public class RecipeIngredient{
 	private Long id;			
 				
 	@Column(name = "Amount")			
-	private Long id;			
+	private Long amount;			
 	
 	public int getRecipeID(){
 
@@ -27,5 +27,13 @@ public class RecipeIngredient{
 
 	}
 
-	public void setAmount( 		
+	public void setAmount(Long amount){
+		this.amount = amount;
+	} 		
+
+	public int getAmount(){
+		return amount;
+	}
+
 				
+}
