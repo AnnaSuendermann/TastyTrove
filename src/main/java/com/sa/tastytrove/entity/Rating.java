@@ -13,10 +13,10 @@ import jakarta.persistence.Table;
 public class Rating {
 	@Id
 	@Column(name= "RatingID")
-	private Long id;
+	private Long ratingid;
 
 	@Column(name= "RecipeID")
-	private Long id;
+	private Long recipeid;
 
 	@Column(name= "Satisfaction")
 	private int rating;
@@ -30,7 +30,7 @@ public class Rating {
 	}
 	
 	public void setSatisfaction(int rating){
-		this.rating = rating;
+		this.ratingid = ratingid;
 	}
 	
 	public int getSatisfaction(){
