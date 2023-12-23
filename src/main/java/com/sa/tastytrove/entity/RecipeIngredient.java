@@ -7,31 +7,39 @@ import jakarta.persistence.Table;
 				
 @Entity				
 // TODO check name and add information for table interaction later				
-@Table(name = "RecipeIngredients")				
+@Table(name = "Recipes_Ingredients")
 public class RecipeIngredient{				
 	@Id			
 	@Column(name = "RecipeID")			
-	private Long recipeid;			
+	private Long recipeId;
 				
 	@Column(name = "IngredientID")			
-	private Long ingredientid;			
+	private Long ingredientId;
 				
 	@Column(name = "Amount")			
-	private Long amount;			
+	private double amount;
 	
-	public int getRecipeID(){
-
-	}
-	
-	public int getIngredientID(){
-
+	public void setRecipeId(Long recipeId){
+		this.recipeId = recipeId;
 	}
 
-	public void setAmount(Long amount){
+	public Long getRecipeID(){
+		return recipeId;
+	}
+
+	public void setIngredientId(Long ingredientId){
+		this.ingredientId = ingredientId;
+	}
+
+	public Long getIngredientID(){
+		return ingredientId;
+	}
+
+	public void setAmount(double amount){
 		this.amount = amount;
 	} 		
 
-	public int getAmount(){
+	public double getAmount(){
 		return amount;
 	}
 

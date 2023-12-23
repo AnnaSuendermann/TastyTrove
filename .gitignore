@@ -48,3 +48,4 @@ build/
 /.idea/sqldialects.xml
 /.idea/misc.xml
 /.idea/.gitignore
+/.idea/uiDesigner.xml

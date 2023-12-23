@@ -1,4 +1,4 @@
-package.com.sa.tastytrove.entity;
+package com.sa.tastytrove.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import java.time.*;
 public class Recipe{
 	@Id
 	@Column(name = "RecipeID")
-	private Long id;
+	private Long recipeId;
 
 	@Column(name = "Name")
 	private String name;
@@ -24,14 +24,14 @@ public class Recipe{
 
 	// TODO time might not work in java -> research
 	@Column(name = "EstimatedTime")
-	private LocalTime esttimatedTime;
+	private LocalTime estimatedTime;
 
-	public void setId(Long id){
-		this.id = id;	
+	public void setRecipeId(Long recipeId){
+		this.recipeId = recipeId;
 	}
 
-	public Long getId(){
-		return id;
+	public Long getRecipeId(){
+		return recipeId;
 	}
 
 	public void setName(String name){
@@ -58,12 +58,12 @@ public class Recipe{
 		return description;
 	}
 
-	public void setEstimatedTime(LocalTime time){
-		this.time = time;
+	public void setEstimatedTime(LocalTime estimatedTime){
+		this.estimatedTime = estimatedTime;
 	}
 
 	public LocalTime getEstimatedTime(){
-		return time;
+		return estimatedTime;
 	}
 
 

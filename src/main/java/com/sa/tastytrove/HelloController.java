@@ -26,7 +26,7 @@ public class HelloController {
         System.out.println("Submit");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("TastyTrove");
         Ingredient cheese = new Ingredient();
-        cheese.setId(Long.parseLong(id.getText()));
+        cheese.setIngredientId(Long.parseLong(id.getText()));
         cheese.setName(name.getText());
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
