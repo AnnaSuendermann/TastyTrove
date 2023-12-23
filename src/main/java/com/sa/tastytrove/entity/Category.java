@@ -8,20 +8,20 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name= "Categories")
-public class Categorie {
+public class Category {
 	@Id
 	@Column(name= "CategoryID")
-	private Long id;
+	private Long categoryId;
 
 	@Column(name= "Name")
 	private String name;
 
-	public void setCategoryId(Long id){
-		this.id = id;
+	public void setCategoryId(Long categoryId){
+		this.categoryId = categoryId;
 	}   
 
 	public Long getCategoryId(){
-		return id;
+		return categoryId;
 	}
 
 	public void setName(String name){
