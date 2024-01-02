@@ -1,14 +1,13 @@
 create table Recipes (
-                         RecipeID int primary key,
+                         RecipeID int primary key auto_increment,
                          Name varchar(64) unique not null,
                          Creator varchar(32),
-                         Description varchar(2048),
-                         EstimatedTime time
+                         Description varchar(2048)
 );
 
 create table Ingredients (
-                             IngredientID int primary key,
-                             Name varchar(64)
+                             IngredientID int primary key auto_increment,
+                             Name varchar(64) unique not null
 );
 
 create table Recipes_Ingredients (

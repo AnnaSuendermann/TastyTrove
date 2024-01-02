@@ -1,6 +1,7 @@
 package com.sa.tastytrove;
 
 import com.sa.tastytrove.entity.Ingredient;
+import com.sa.tastytrove.entity.Recipe;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -25,12 +26,29 @@ public class HelloController {
     protected void onSubmit(){
         System.out.println("Submit");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("TastyTrove");
-        Ingredient cheese = new Ingredient();
-        cheese.setIngredientId(Long.parseLong(id.getText()));
-        cheese.setName(name.getText());
+
+        Recipe kartoffelSalat = new Recipe();
+        kartoffelSalat.setName("Kartoffelsalat");
+        kartoffelSalat.setCreator("Anna");
+        kartoffelSalat.setDescription("Doing Kartoffelsalat!");
+
+        Ingredient kartoffel = new Ingredient();
+        kartoffel.setName("Kartoffel");
+
+        Ingredient zwiebel = new Ingredient();
+        zwiebel.setName("Zwiebel");
+
+        kartoffelSalat.setIngredient(kartoffel);
+        kartoffelSalat.setIngredient(zwiebel);
+
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.persist(cheese);
+
+
+
+        em.persist(kartoffelSalat);
+
+
         em.getTransaction().commit();
         em.close();
     }

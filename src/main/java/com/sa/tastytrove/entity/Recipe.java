@@ -1,15 +1,13 @@
 package com.sa.tastytrove.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import java.time.*;
+import jakarta.persistence.*;
+import java.util.HashSet;
 
 @Entity
 @Table(name = "Recipes")
 public class Recipe{
 	@Id
+	@GeneratedValue
 	@Column(name = "RecipeID")
 	private Long recipeId;
 
@@ -22,9 +20,8 @@ public class Recipe{
 	@Column(name = "Description")
 	private String description;
 
-	// TODO time might not work in java -> research
-	@Column(name = "EstimatedTime")
-	private LocalTime estimatedTime;
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	private HashSet<Ingredient> ingredients = new HashSet<>();
 
 	public void setRecipeId(Long recipeId){
 		this.recipeId = recipeId;
@@ -58,23 +55,7 @@ public class Recipe{
 		return description;
 	}
 
-	public void setEstimatedTime(LocalTime estimatedTime){
-		this.estimatedTime = estimatedTime;
+	public void setIngredient(Ingredient ingredient){
+		this.ingredients.add(ingredient);
 	}
-
-	public LocalTime getEstimatedTime(){
-		return estimatedTime;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
 }
